@@ -65,7 +65,7 @@ This project documents the end-to-end design, deployment, and validation of a **
 siem-elastic-stack-project/
 │
 ├── README.md
-├── SIEM_Personal_Project_Ajoku.pdf     ← Full portfolio document
+├── SIEM_Personal_Project_Toochukwu_Praise_Ajoku.pdf     ← Full portfolio document
 │
 └── screenshots/
     ├── 01_elastic_stack_operational.png
