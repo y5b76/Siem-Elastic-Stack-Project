@@ -28,25 +28,25 @@ This project documents the end-to-end design, deployment, and validation of a **
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                   ELASTIC FLEET (Control Plane)          │
-│              Central Policy Orchestration                │
+│                   ELASTIC FLEET (Control Plane)         │
+│              Central Policy Orchestration               │
 └───────────────────────┬─────────────────────────────────┘
                         │  Encrypted Agent Comms (mTLS)
                         ▼
 ┌─────────────────────────────────────────────────────────┐
-│           Ubuntu 24.04 LTS — Monitored Endpoint          │
+│           Ubuntu 24.04 LTS — Monitored Endpoint         │
 │  Elastic Agent → /var/log/auth.log + /var/log/syslog*   │
 └───────────────────────┬─────────────────────────────────┘
                         │  ECS-Normalised Telemetry
                         ▼
 ┌─────────────────────────────────────────────────────────┐
-│         Elasticsearch 8.11 — Data Lake                   │
+│         Elasticsearch 8.11 — Data Lake                  │
 │     Grok Parsing → Field Extraction → Indexing          │
 └───────────────────────┬─────────────────────────────────┘
                         │
                         ▼
 ┌─────────────────────────────────────────────────────────┐
-│              Kibana — Analytics & Alerting               │
+│              Kibana — Analytics & Alerting              │
 │   KQL Detection Rules │ SOC Dashboard │ Mgmt Dashboard  │
 └─────────────────────────────────────────────────────────┘
 
