@@ -20,7 +20,7 @@ This project documents the end-to-end design, deployment, and validation of a **
 - ✅ Dual-audience **role-based dashboards** (SOC Analyst & Executive/Management)
 - ✅ Critical reflection covering detection trade-offs, evasion limitations, and **UK GDPR governance**
 
-> 📄 **[Download the full project portfolio document →](./SIEM_Personal_Project_Ajoku.docx)**
+> 📄 **[Download the full project portfolio document →](./SIEM_Personal_Project_Toochukwu_Praise_Ajoku.pdf)**
 
 ---
 
