@@ -95,8 +95,8 @@ siem-elastic-stack-project/
 
 | Component | Role |
 |---|---|
-| **Elasticsearch 8.11** | Data lake - ingestion, indexing, and search |
-| **Kibana 8.11** | Analytics UI - dashboards, KQL, alerting |
+| **Elasticsearch 8.11** | Data lake; ingestion, indexing, and search |
+| **Kibana 8.11** | Analytics UI; dashboards, KQL, alerting |
 | **Elastic Fleet** | Centralised agent policy management |
 | **Elastic Agent** | Log collection on monitored endpoint |
 | **Ubuntu 24.04 LTS** | Target server (monitored) |
@@ -171,15 +171,15 @@ Parsed ECS fields stored in Elasticsearch:
 
 ### Screenshots
 
-| Fig 1 - Elastic Stack Operational | Fig 2 - Elastic Agent Successfully Installed |
+| Fig 1: Elastic Stack Operational | Fig 2: Elastic Agent Successfully Installed |
 |---|---|
 | ![Fig1](screenshots/01_elastic_stack_operational.png) | ![Fig2](screenshots/02_elastic_agent_installed.png) |
 
-| Fig 3 - Multi-Source Ingestion (Discover) | Fig 4 - ECS Field Extraction (JSON) |
+| Fig 3: Multi-Source Ingestion (Discover) | Fig 4: ECS Field Extraction (JSON) |
 |---|---|
 | ![Fig3](screenshots/03_kibana_discover_ingestion.png) | ![Fig4](screenshots/04_ecs_json_field_extraction.png) |
 
-| Fig 5 - 100% Indexing Confirmed |  |
+| Fig 5: 100% Indexing Confirmed |  |
 |---|---|
 | ![Fig5](screenshots/05_field_statistics_indexing.png) | |
 
@@ -190,7 +190,7 @@ Parsed ECS fields stored in Elasticsearch:
 ### Adversarial Simulation
 
 ```bash
-# Hydra SSH brute-force - MITRE ATT&CK T1110.001
+# Hydra SSH brute-force: MITRE ATT&CK T1110.001
 sudo hydra \
   -l chizzi \
   -P /usr/share/wordlists/metasploit/unix_passwords.txt \
@@ -220,15 +220,15 @@ A legitimate user forgetting their password generates 1–3 failures. Hydra gene
 
 ### Screenshots
 
-| Fig 6 - Hydra Attack in Execution | Fig 7 - Failed Auth Log Entry |
+| Fig 6: Hydra Attack in Execution | Fig 7: Failed Auth Log Entry |
 |---|---|
 | ![Fig6](screenshots/06_hydra_attack_execution.png) | ![Fig7](screenshots/07_failed_auth_log_entry.png) |
 
-| Fig 8 - KQL Detection Rule Config | Fig 9 - Threshold Rule Config |
+| Fig 8: KQL Detection Rule Config | Fig 9: Threshold Rule Config |
 |---|---|
 | ![Fig8](screenshots/08_kql_detection_rule.png) | ![Fig9](screenshots/09_threshold_rule_config.png) |
 
-| Fig 10 - Live Alert: Adversary Attributed to 192.168.56.6 |  |
+| Fig 10: Live Alert: Adversary Attributed to 192.168.56.6 |  |
 |---|---|
 | ![Fig10](screenshots/10_alert_execution_proof.png) | |
 
@@ -248,15 +248,15 @@ Two distinct dashboards were built for different audiences:
 | Top IPs - UFW Firewall Blocks | Bar Chart | Identifies dominant blocked sources |
 | Events by Process Name | Pie Chart | sshd (27.4%) + kernel (27.6%) = 55% of activity |
 
-| Fig 11 - Event Volume | Fig 12 - Auth Failure Ratio |
+| Fig 11: Event Volume | Fig 12: Auth Failure Ratio |
 |---|---|
 | ![Fig11](screenshots/11_soc_event_volume_chart.png) | ![Fig12](screenshots/12_soc_auth_failure_pie.png) |
 
-| Fig 13 - KPI Tile | Fig 14 - UFW Firewall Blocks |
+| Fig 13: KPI Tile | Fig 14: UFW Firewall Blocks |
 |---|---|
 | ![Fig13](screenshots/13_soc_kpi_high_risk_count.png) | ![Fig14](screenshots/14_soc_ufw_firewall_blocks.png) |
 
-| Fig 15 - Events by Process |  |
+| Fig 15: Events by Process |  |
 |---|---|
 | ![Fig15](screenshots/15_soc_events_by_process.png) | |
 
@@ -271,11 +271,11 @@ Two distinct dashboards were built for different audiences:
 | Most Frequent Error Sources | Data Table | sshd: 9,044 errors (18× next-ranked process) |
 | System Health Indicator | Linear Gauge | Single-glance executive health summary |
 
-| Fig 16 - Incident Trend | Fig 17 - Source Breakdown |
+| Fig 16: Incident Trend | Fig 17: Source Breakdown |
 |---|---|
 | ![Fig16](screenshots/16_mgmt_incident_trend.png) | ![Fig17](screenshots/17_mgmt_source_breakdown.png) |
 
-| Fig 18 - Error Sources Table | Fig 19 - System Health Gauge |
+| Fig 18: Error Sources Table | Fig 19: System Health Gauge |
 |---|---|
 | ![Fig18](screenshots/18_mgmt_error_sources_table.png) | ![Fig19](screenshots/19_mgmt_system_health_gauge.png) |
 
@@ -286,7 +286,7 @@ Two distinct dashboards were built for different audiences:
 | Limitation | Description | Planned Mitigation |
 |---|---|---|
 | **Low-and-slow evasion** | Attacker at 9 req/min indefinitely never triggers alert | Elastic ML anomaly detection on auth baseline |
-| **Distributed brute-force** | Botnet across 500 IPs - no single IP exceeds threshold | Add `user.name`-grouped detection rule |
+| **Distributed brute-force** | Botnet across 500 IPs; no single IP exceeds threshold | Add `user.name`-grouped detection rule |
 | **Contextual blindness** | Each 60s window evaluated in isolation | Stateful cumulative counter over longer windows |
 | **UFW source IP parsing** | `host.ip` used as proxy; real attacker IP in raw message | Custom Grok ingest pipeline for UFW BLOCK events |
 | **No automated response** | Alert fires but no automatic block triggered | SOAR integration → auto `iptables` block on confirmed alert |
