@@ -185,7 +185,7 @@ Parsed ECS fields stored in Elasticsearch:
 
 ---
 
-## ⚔️ Part 2 - Detection Engineering & Alert Logic
+## ⚔️ Part 2: Detection Engineering & Alert Logic
 
 ### Adversarial Simulation
 
@@ -234,7 +234,7 @@ A legitimate user forgetting their password generates 1–3 failures. Hydra gene
 
 ---
 
-## 📊 Part 3 - Role-Based Dashboards
+## 📊 Part 3: Role-Based Dashboards
 
 Two distinct dashboards were built for different audiences:
 
