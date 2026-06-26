@@ -335,4 +335,4 @@ Student Member, CIISec
 
 ---
 
-*This project was conducted in a controlled virtual lab environment. All adversarial activity was performed against systems I own and operate, strictly for educational and research purposes.*
+*This project was conducted in a controlled virtual lab environment. All adversarial activity was performed against systems I own and operate, strictly for educational and portfolio purposes.*
